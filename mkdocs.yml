@@ -1,0 +1,10 @@
+site_name: Отчет о тестовом задании по направлению «Frontend-разработка»
+site_url: https://github.com/tt3cpl/select_testwork.github.io.git/
+theme:
+  name: material
+
+nav:
+  - Главная: index.md
+  - Описание проекта: readme123.md
+
+  

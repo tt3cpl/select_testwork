@@ -1,0 +1,22 @@
+<h2>
+  Выбраны меню: 
+  <ng-container *ngIf="selectedMenu; else noMenu">
+    {{ selectedMenu.name }}
+  </ng-container>
+  <ng-template #noMenu>—</ng-template>
+  |
+  Количество: {{ selectedItems.length }} |
+  Сумма: {{ totalPrice }}
+</h2>
+
+<div *ngFor="let m of menu">
+  <h3>{{ m.name }}</h3>
+  <ul>
+    <li *ngFor="let dish of m.dishes">
+      <label>
+        <input type="checkbox" [(ngModel)]="dish.checked">
+        {{ dish.name }} - {{ dish.price }}
+      </label>
+    </li>
+  </ul>
+</div>
